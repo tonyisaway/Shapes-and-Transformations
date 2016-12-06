@@ -1,0 +1,6 @@
+<transformations>
+  <scale factor="4" />
+  <move left="4" up="8" />
+  <rotate degrees="45" />
+  <move left="14" up="48" />
+</transformations>
