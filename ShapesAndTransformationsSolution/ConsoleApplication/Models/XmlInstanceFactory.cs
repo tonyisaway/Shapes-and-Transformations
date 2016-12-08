@@ -4,11 +4,11 @@
     using System;
     using System.Xml.Linq;
 
-    public class InstanceFactory : IInstanceFactory
+    public class XmlInstanceFactory : IInstanceFactory
     {
         IXElementObjectPopulator populator;
 
-        public InstanceFactory(IXElementObjectPopulator populator)
+        public XmlInstanceFactory(IXElementObjectPopulator populator)
         {
             this.populator = populator;
         }

@@ -5,7 +5,7 @@
     using System.Reflection;
     using System;
 
-    public class XElementObjectPopulator : IXElementObjectPopulator
+    public class XmlObjectPopulator : IXElementObjectPopulator
     {
         public void Populate(XElement element, object obj)
         {

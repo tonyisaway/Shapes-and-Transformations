@@ -59,10 +59,10 @@
     <Compile Include="Models\Parameters\Shapes\CircleParameters.cs" />
     <Compile Include="Models\ObjectConsolePrinter.cs" />
     <Compile Include="Models\Parameters\Shapes\ShapeParameters.cs" />
-    <Compile Include="Models\InstanceFactory.cs" />
+    <Compile Include="Models\XmlInstanceFactory.cs" />
     <Compile Include="Models\ObjectsConsolePrinter.cs" />
-    <Compile Include="Models\InstancesGetter.cs" />
-    <Compile Include="Models\XElementObjectPopulator.cs" />
+    <Compile Include="Models\XmlInstancesGetter.cs" />
+    <Compile Include="Models\XmlObjectPopulator.cs" />
     <Compile Include="Models\Parameters\Shapes\TriangleParameters.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

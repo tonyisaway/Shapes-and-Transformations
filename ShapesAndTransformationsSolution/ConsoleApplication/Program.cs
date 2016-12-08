@@ -30,7 +30,7 @@
         {
             var xml = XElement.Load("App_Data/Shapes.xml");
 
-            var g = new InstancesGetter(new InstanceFactory(new XElementObjectPopulator()));
+            var g = new XmlInstancesGetter(new XmlInstanceFactory(new XmlObjectPopulator()));
             return g.GetAll(xml);
         }
 
@@ -39,7 +39,7 @@
         {
             var xml = XElement.Load("App_Data/Transformations.xml");
 
-            var g = new InstancesGetter(new InstanceFactory(new XElementObjectPopulator()));
+            var g = new XmlInstancesGetter(new XmlInstanceFactory(new XmlObjectPopulator()));
             return g.GetAll(xml);
         }
 

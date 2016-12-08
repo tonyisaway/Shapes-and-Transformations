@@ -5,12 +5,12 @@
     using System.Collections.Generic;
     using System.Xml.Linq;
 
-    public class InstancesGetter : IInstancesGetter
+    public class XmlInstancesGetter : IInstancesGetter
     {
         IInstanceFactory factory;
         IList<object> objects = new List<object>();
 
-        public InstancesGetter(IInstanceFactory factory)
+        public XmlInstancesGetter(IInstanceFactory factory)
         {
             this.factory = factory;
         }
