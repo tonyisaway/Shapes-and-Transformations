@@ -30,7 +30,7 @@
         {
             var xml = XElement.Load("App_Data/Shapes.xml");
 
-            var g = new XmlInstancesGetter(new XmlInstanceFactory(new XmlObjectPopulator()));
+            var g = new XmlInstancesGetter(new XmlInstanceFactory(new XmlInstancePopulator()));
             return g.GetAll(xml);
         }
 
@@ -39,7 +39,7 @@
         {
             var xml = XElement.Load("App_Data/Transformations.xml");
 
-            var g = new XmlInstancesGetter(new XmlInstanceFactory(new XmlObjectPopulator()));
+            var g = new XmlInstancesGetter(new XmlInstanceFactory(new XmlInstancePopulator()));
             return g.GetAll(xml);
         }
 
@@ -52,7 +52,7 @@
 
         static void PrintOut(IEnumerable<object> objs)
         {
-            var p = new ObjectsConsolePrinter(new ObjectConsolePrinter());
+            var p = new InstancesConsolePrinter(new InstanceConsolePrinter());
             p.Print(objs);
         }
 

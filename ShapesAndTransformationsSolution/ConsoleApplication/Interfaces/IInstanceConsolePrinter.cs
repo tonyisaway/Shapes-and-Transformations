@@ -1,6 +1,6 @@
 ﻿namespace ConsoleApplication.Interfaces
 {
-    public interface IObjectConsolePrinter
+    public interface IInstanceConsolePrinter
     {
         void Print(object obj);
     }

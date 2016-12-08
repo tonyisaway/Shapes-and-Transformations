@@ -4,10 +4,10 @@
     using Interfaces;
     using System;
 
-    public class ObjectsConsolePrinter : IObjectsConsolePrinter
+    public class InstancesConsolePrinter : IInstancesConsolePrinter
     {
-        IObjectConsolePrinter objPrinter;
-        public ObjectsConsolePrinter(IObjectConsolePrinter objPrinter)
+        IInstanceConsolePrinter objPrinter;
+        public InstancesConsolePrinter(IInstanceConsolePrinter objPrinter)
         {
             this.objPrinter = objPrinter;
         }

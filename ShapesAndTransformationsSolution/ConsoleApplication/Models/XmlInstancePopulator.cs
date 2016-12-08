@@ -5,10 +5,11 @@
     using System.Reflection;
     using System;
 
-    public class XmlObjectPopulator : IXElementObjectPopulator
+    public class XmlInstancePopulator : IObjectPopulator
     {
-        public void Populate(XElement element, object obj)
+        public void Populate(string xmlString, object obj)
         {
+            var element = XElement.Parse(xmlString);
             var type = obj.GetType();
             foreach (var attribute in element.Attributes())
             {

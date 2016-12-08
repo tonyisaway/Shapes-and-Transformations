@@ -2,7 +2,7 @@
 {
     using System.Collections.Generic;
 
-    public interface IObjectsConsolePrinter
+    public interface IInstancesConsolePrinter
     {
         void Print(IEnumerable<object> objects);
     }

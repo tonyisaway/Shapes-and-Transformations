@@ -6,15 +6,16 @@
 
     public class XmlInstanceFactory : IInstanceFactory
     {
-        IXElementObjectPopulator populator;
+        IObjectPopulator populator;
 
-        public XmlInstanceFactory(IXElementObjectPopulator populator)
+        public XmlInstanceFactory(IObjectPopulator populator)
         {
             this.populator = populator;
         }
 
-        public object Create(XElement element, string instanceFamily)
+        public object Create(string xmlString, string instanceFamily)
         {
+            var element = XElement.Parse(xmlString);
             var name = element.Name.LocalName;
             var type = Type.GetType(string.Format("ConsoleApplication.Models.Parameters.{0}.{1}Parameters", instanceFamily, name), false, true);
 
@@ -24,7 +25,7 @@
             }
 
             var obj = Activator.CreateInstance(type);
-            populator.Populate(element, obj);
+            populator.Populate(element.ToString(), obj);
 
             return obj;
         }

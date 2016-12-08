@@ -4,7 +4,7 @@
     using Interfaces;
     using System.Reflection;
 
-    public class ObjectConsolePrinter : IObjectConsolePrinter
+    public class InstanceConsolePrinter : IInstanceConsolePrinter
     {
         public void Print(object obj)
         {

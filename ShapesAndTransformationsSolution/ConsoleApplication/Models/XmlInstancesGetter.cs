@@ -19,7 +19,7 @@
         {
             foreach(var element in xml.Elements())
             {
-                var obj = factory.Create(element, xml.Name.LocalName);
+                var obj = factory.Create(element.ToString(), xml.Name.LocalName);
                 objects.Add(obj);
             }
 
