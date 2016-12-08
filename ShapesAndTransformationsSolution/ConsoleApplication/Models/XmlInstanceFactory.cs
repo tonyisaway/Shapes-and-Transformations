@@ -6,9 +6,9 @@
 
     public class XmlInstanceFactory : IInstanceFactory
     {
-        IObjectPopulator populator;
+        IInstancePopulator populator;
 
-        public XmlInstanceFactory(IObjectPopulator populator)
+        public XmlInstanceFactory(IInstancePopulator populator)
         {
             this.populator = populator;
         }

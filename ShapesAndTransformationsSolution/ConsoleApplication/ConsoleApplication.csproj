@@ -48,7 +48,7 @@
     <Compile Include="Interfaces\IInstanceConsolePrinter.cs" />
     <Compile Include="Interfaces\IInstancesGetter.cs" />
     <Compile Include="Interfaces\IInstancesConsolePrinter.cs" />
-    <Compile Include="Interfaces\IObjectPopulator.cs" />
+    <Compile Include="Interfaces\IInstancePopulator.cs" />
     <Compile Include="Interfaces\ITransform.cs" />
     <Compile Include="Models\Parameters\Transformations\MoveParameters.cs" />
     <Compile Include="Models\Parameters\Transformations\RotateParameters.cs" />

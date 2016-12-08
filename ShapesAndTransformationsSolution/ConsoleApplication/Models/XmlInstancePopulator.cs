@@ -5,7 +5,7 @@
     using System.Reflection;
     using System;
 
-    public class XmlInstancePopulator : IObjectPopulator
+    public class XmlInstancePopulator : IInstancePopulator
     {
         public void Populate(string xmlString, object obj)
         {
