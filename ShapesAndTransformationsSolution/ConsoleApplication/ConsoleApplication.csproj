@@ -58,6 +58,12 @@
     <Compile Include="Models\Parameters\Shapes\CircleParameters.cs" />
     <Compile Include="Models\InstanceConsolePrinter.cs" />
     <Compile Include="Models\Parameters\Shapes\ShapeParameters.cs" />
+    <Compile Include="Models\Shapes\Circle.cs" />
+    <Compile Include="Models\Shapes\Coordinate.cs" />
+    <Compile Include="Interfaces\ICoordinate.cs" />
+    <Compile Include="Models\Shapes\Rectangle.cs" />
+    <Compile Include="Models\Shapes\Square.cs" />
+    <Compile Include="Models\Shapes\Triangle.cs" />
     <Compile Include="Models\XmlInstanceFactory.cs" />
     <Compile Include="Models\InstancesConsolePrinter.cs" />
     <Compile Include="Models\XmlInstancesGetter.cs" />
@@ -69,9 +75,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Interfaces\Shapes\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="App_Data\Shapes.xml" />
     <Content Include="App_Data\Transformations.xml" />
