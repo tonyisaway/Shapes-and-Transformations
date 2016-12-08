@@ -2,7 +2,7 @@
 {
     using Interfaces;
 
-    public class Circle
+    public class Circle : IShape
     {
         public Circle(ICoordinatePoint centrePoint, ICoordinatePoint radiusPoint)
         {

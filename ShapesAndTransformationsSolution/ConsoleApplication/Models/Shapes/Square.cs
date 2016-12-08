@@ -3,7 +3,7 @@
     using Interfaces;
     using System;
 
-    public class Square
+    public class Square : IShape
     {
         public Square(ICoordinatePoint topRightVertex, ICoordinatePoint bottomLeftVertex)
         {

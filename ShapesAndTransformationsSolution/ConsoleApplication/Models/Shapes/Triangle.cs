@@ -2,7 +2,7 @@
 {
     using Interfaces;
 
-    public class Triangle
+    public class Triangle : IShape
     {
         public Triangle(ICoordinatePoint firstVertex, ICoordinatePoint secondVertex, ICoordinatePoint thirdVertex)
         {

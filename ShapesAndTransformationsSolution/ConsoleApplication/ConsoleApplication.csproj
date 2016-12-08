@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IShape.cs" />
     <Compile Include="Interfaces\IShapeParameters.cs" />
     <Compile Include="Interfaces\IInstanceFactory.cs" />
     <Compile Include="Interfaces\IInstanceConsolePrinter.cs" />
@@ -50,6 +51,8 @@
     <Compile Include="Interfaces\IInstancesConsolePrinter.cs" />
     <Compile Include="Interfaces\IInstancePopulator.cs" />
     <Compile Include="Interfaces\ITransformationParameters.cs" />
+    <Compile Include="Interfaces\IShapeFactory.cs" />
+    <Compile Include="Interfaces\IShapesGetter.cs" />
     <Compile Include="Models\Parameters\Transformations\MoveParameters.cs" />
     <Compile Include="Models\Parameters\Transformations\RotateParameters.cs" />
     <Compile Include="Models\Parameters\Transformations\ScaleParameters.cs" />
@@ -58,6 +61,8 @@
     <Compile Include="Models\Parameters\Shapes\CircleParameters.cs" />
     <Compile Include="Models\InstanceConsolePrinter.cs" />
     <Compile Include="Models\Parameters\Shapes\ShapeParameters.cs" />
+    <Compile Include="Models\ShapeFactory.cs" />
+    <Compile Include="Models\ShapesGetter.cs" />
     <Compile Include="Models\Shapes\Circle.cs" />
     <Compile Include="Models\Shapes\Coordinate.cs" />
     <Compile Include="Interfaces\ICoordinate.cs" />

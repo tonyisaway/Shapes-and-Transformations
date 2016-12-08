@@ -3,7 +3,7 @@
     using Interfaces;
     using System;
 
-    public class Rectangle
+    public class Rectangle : IShape
     {
         public Rectangle(ICoordinatePoint topRightVertex, ICoordinatePoint bottomLeftVertex)
         {
