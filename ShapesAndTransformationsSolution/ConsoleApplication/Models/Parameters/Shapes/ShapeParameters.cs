@@ -2,9 +2,9 @@
 {
     using Interfaces;
 
-    public class ShapeParameters : IShape
+    public abstract class ShapeParameters : IShapeParameters
     {
-        public ShapeParameters(string name)
+        internal ShapeParameters(string name)
         {
             Name = name;
         }

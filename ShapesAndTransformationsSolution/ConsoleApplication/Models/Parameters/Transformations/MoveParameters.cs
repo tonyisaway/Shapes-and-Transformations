@@ -1,6 +1,8 @@
 ﻿namespace ConsoleApplication.Models.Parameters.Transformations
 {
-    public class MoveParameters
+    using Interfaces;
+
+    public class MoveParameters : ITransformationParameters
     {
         public int Left { get; set; }
         public int Up { get; set; }

@@ -43,13 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\Shapes\IShape.cs" />
+    <Compile Include="Interfaces\IShapeParameters.cs" />
     <Compile Include="Interfaces\IInstanceFactory.cs" />
     <Compile Include="Interfaces\IInstanceConsolePrinter.cs" />
     <Compile Include="Interfaces\IInstancesGetter.cs" />
     <Compile Include="Interfaces\IInstancesConsolePrinter.cs" />
     <Compile Include="Interfaces\IInstancePopulator.cs" />
-    <Compile Include="Interfaces\ITransform.cs" />
+    <Compile Include="Interfaces\ITransformationParameters.cs" />
     <Compile Include="Models\Parameters\Transformations\MoveParameters.cs" />
     <Compile Include="Models\Parameters\Transformations\RotateParameters.cs" />
     <Compile Include="Models\Parameters\Transformations\ScaleParameters.cs" />
@@ -65,12 +65,13 @@
     <Compile Include="Models\Parameters\Shapes\TriangleParameters.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Models\MacroTransformer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Interfaces\Shapes\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\Shapes.xml" />
     <Content Include="App_Data\Transformations.xml" />

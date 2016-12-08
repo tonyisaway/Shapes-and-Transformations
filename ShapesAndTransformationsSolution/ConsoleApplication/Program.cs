@@ -46,8 +46,6 @@
 
         static void TransformShapes(IEnumerable<object> objs)
         {
-            //var t = new MacroTransformer();
-            //t.Transform();
         }
 
         static void PrintOut(IEnumerable<object> objs)

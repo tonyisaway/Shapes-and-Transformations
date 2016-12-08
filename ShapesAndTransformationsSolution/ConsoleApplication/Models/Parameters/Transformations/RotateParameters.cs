@@ -1,6 +1,8 @@
 ﻿namespace ConsoleApplication.Models.Parameters.Transformations
 {
-    public class RotateParameters
+    using Interfaces;
+
+    public class RotateParameters : ITransformationParameters
     {
         public int Degrees { get; set; }
     }

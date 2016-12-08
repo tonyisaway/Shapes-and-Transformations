@@ -1,7 +1,6 @@
 ﻿namespace ConsoleApplication.Interfaces
 {
-    public interface ITransform
+    public interface ITransformationParameters
     {
-        void Transform();
     }
 }

@@ -1,6 +1,8 @@
 ﻿namespace ConsoleApplication.Models.Parameters.Transformations
 {
-    public class ScaleParameters
+    using Interfaces;
+
+    public class ScaleParameters : ITransformationParameters
     {
         public int Factor { get; set; }
     }

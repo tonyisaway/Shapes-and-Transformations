@@ -1,6 +1,6 @@
 ﻿namespace ConsoleApplication.Interfaces
 {
-    public interface IShape
+    public interface IShapeParameters
     {
         string Name { get; }
     }
