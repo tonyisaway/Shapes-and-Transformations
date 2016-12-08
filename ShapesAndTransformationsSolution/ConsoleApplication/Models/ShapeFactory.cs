@@ -8,7 +8,6 @@
     {
         public IShape Create(IShapeParameters parameters)
         {
-            
             if (parameters is CircleParameters)
             {
                 var shapeParams = parameters as CircleParameters;
@@ -20,11 +19,29 @@
             if (parameters is RectangleParameters)
             {
                 var shapeParams = parameters as RectangleParameters;
-                var topRightVertex = new CoordinatePoint(shapeParams.RightUpper, shapeParams.L);
-                var bottomLeftVertex = new CoordinatePoint(shapeParams.CentreX, shapeParams.CentreY);
-                return new Rectangle(topRightVertex, bottomLeftVertex);
+                var upperRightVertex = new CoordinatePoint(shapeParams.UpperRightX, shapeParams.UpperRightY);
+                var lowerLeftVertex = new CoordinatePoint(shapeParams.LowerLeftX, shapeParams.LowerLeftY);
+                return new Rectangle(upperRightVertex, lowerLeftVertex);
             }
 
+            if (parameters is SquareParameters)
+            {
+                var shapeParams = parameters as SquareParameters;
+                var lowerLeftVertex = new CoordinatePoint(shapeParams.LowerLeftX, shapeParams.LowerLeftY);
+                var upperRightVertex = new CoordinatePoint(shapeParams.LowerLeftX + shapeParams.Height, shapeParams.LowerLeftY + shapeParams.Height);
+                return new Square(upperRightVertex, lowerLeftVertex);
+            }
+
+            if (parameters is TriangleParameters)
+            {
+                var shapeParams = parameters as TriangleParameters;
+                var firstVertex = new CoordinatePoint(shapeParams.OneX, shapeParams.OneY);
+                var secondVertex = new CoordinatePoint(shapeParams.TwoX, shapeParams.TwoY);
+                var thirdVertex = new CoordinatePoint(shapeParams.ThreeX, shapeParams.ThreeY);
+                return new Triangle(firstVertex, secondVertex, thirdVertex);
+            }
+
+            throw new System.Exception();
         }
     }
 }

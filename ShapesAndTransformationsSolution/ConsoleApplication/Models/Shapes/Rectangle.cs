@@ -5,21 +5,21 @@
 
     public class Rectangle : IShape
     {
-        public Rectangle(ICoordinatePoint topRightVertex, ICoordinatePoint bottomLeftVertex)
+        public Rectangle(ICoordinatePoint upperRightVertex, ICoordinatePoint lowerLeftVertex)
         {
-            TopRightVertex = topRightVertex;
-            BottomLeftVertex = bottomLeftVertex;
+            UpperRightVertex = upperRightVertex;
+            LowerLeftVertex = lowerLeftVertex;
 
-            if (!((TopRightVertex.X == BottomRightVertex.X) && (BottomLeftVertex.X == TopLeftVertex.X)) 
-                && ((TopRightVertex.Y == TopLeftVertex.Y) && (BottomLeftVertex.Y == BottomRightVertex.Y)))
+            if (!((UpperRightVertex.X == LowerRightVertex.X) && (LowerLeftVertex.X == UpperLeftVertex.X)) 
+                && ((UpperRightVertex.Y == UpperLeftVertex.Y) && (LowerLeftVertex.Y == LowerRightVertex.Y)))
             {
                 throw new InvalidOperationException("Given coordiates are not valid for a rectangle.");
             }
         }
 
-        ICoordinatePoint TopRightVertex { get; }
-        ICoordinatePoint BottomRightVertex => new CoordinatePoint(TopRightVertex.X, BottomLeftVertex.Y);
-        ICoordinatePoint BottomLeftVertex { get; }
-        ICoordinatePoint TopLeftVertex => new CoordinatePoint(BottomLeftVertex.X, TopRightVertex.Y);
+        ICoordinatePoint UpperRightVertex { get; }
+        ICoordinatePoint LowerRightVertex => new CoordinatePoint(UpperRightVertex.X, LowerLeftVertex.Y);
+        ICoordinatePoint LowerLeftVertex { get; }
+        ICoordinatePoint UpperLeftVertex => new CoordinatePoint(LowerLeftVertex.X, UpperRightVertex.Y);
     }
 }

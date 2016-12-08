@@ -7,7 +7,7 @@
         }
 
         public int Height { get; set; }
-        public int LeftX { get; set; }
-        public int LeftY { get; set; }
+        public int LowerLeftX { get; set; }
+        public int LowerLeftY { get; set; }
     }
 }

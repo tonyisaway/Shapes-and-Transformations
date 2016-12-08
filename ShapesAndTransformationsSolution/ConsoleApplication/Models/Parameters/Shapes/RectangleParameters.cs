@@ -6,9 +6,9 @@
         {
         }
 
-        public int LeftUpper { get; set; }
-        public int LeftLower { get; set; }
-        public int RightUpper { get; set; }
-        public int RightLower { get; set; }
+        public int LowerLeftX { get; set; }
+        public int LowerLeftY { get; set; }
+        public int UpperRightX { get; set; }
+        public int UpperRightY { get; set; }
     }
 }

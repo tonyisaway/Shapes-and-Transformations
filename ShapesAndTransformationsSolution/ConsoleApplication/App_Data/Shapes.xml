@@ -1,6 +1,6 @@
 <shapes>
   <circle centreX="2" centreY="4" radius="3"/>
-  <square leftX="1" leftY="1" height="5" />
-  <rectangle leftUpper="6" leftLower="1" rightUpper="6" rightLower="2" />
+  <square LowerLeftX="1" LowerLeftY="1" height="5" />
+  <rectangle LowerLeftX="6" LowerLeftY="1" UpperRightX="6" UpperRightY="2" />
   <triangle oneX="1" oneY="1" twoX="4" twoY="4" threeX="2" threeY="2" />
 </shapes>
