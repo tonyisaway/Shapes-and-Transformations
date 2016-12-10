@@ -9,36 +9,46 @@
         IShapesAttributesGetter shapesAttributesGetter;
         IShapeVerticesGetter shapesVerticesGetter;
         IShapeTransformationsAttributesGetter shapeTransformationsAttributesGetter;
+        IShapeAttributesPrinter shapeAttributesPrinter;
+        IShapeTransformer shapeTransformer;
 
-        public ShapesAndTransformations(IShapesAttributesGetter shapesAttributesGetter, IShapeVerticesGetter shapesVerticesGetter, IShapeTransformationsAttributesGetter shapeTransformationsAttributesGetter)
+        public ShapesAndTransformations(IShapesAttributesGetter shapesAttributesGetter
+            , IShapeVerticesGetter shapesVerticesGetter
+            , IShapeTransformationsAttributesGetter shapeTransformationsAttributesGetter
+            , IShapeAttributesPrinter shapeAttributesPrinter
+            , IShapeTransformer shapeTransformer)
         {
             // TODO: These cannot be null
             this.shapesAttributesGetter = shapesAttributesGetter;
             this.shapesVerticesGetter = shapesVerticesGetter;
             this.shapeTransformationsAttributesGetter = shapeTransformationsAttributesGetter;
+            this.shapeAttributesPrinter = shapeAttributesPrinter;
+            this.shapeTransformer = shapeTransformer;
         }
 
         public void LoadShapes()
         {
-            var shapeAttributes = shapesAttributesGetter.Get();
             Console.WriteLine("Loading shapes");
+            var shapeAttributes = shapesAttributesGetter.Get();
         }
 
         public void LoadTransforms()
         {
-            var shapeTransformationAttributes = shapeTransformationsAttributesGetter.Get();
             Console.WriteLine("Loading transforms");
+            var shapeTransformationAttributes = shapeTransformationsAttributesGetter.Get();
         }
 
         public void PrintShapes()
         {
             Console.WriteLine("Printing shapes");
+            shapeAttributesPrinter.Print();
         }
 
         public void TransformShapes()
         {
-            var shapeVertices = shapesVerticesGetter.Get();
             Console.WriteLine("Transforming shapes");
+            var shapeVertices = shapesVerticesGetter.Get();
+            shapeTransformer.Transform();
         }
     }
 }

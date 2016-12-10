@@ -14,8 +14,13 @@
             var shapesAttributesGetter = new ShapesAttributesGetter();
             var shapesVerticesGetter = new ShapeVerticesGetter();
             var shapeTransformationsAttributesGetter = new ShapeTransformationsAttributesGetter();
-
-            var shapesAndTransformations = new ShapesAndTransformations(shapesAttributesGetter, shapesVerticesGetter, shapeTransformationsAttributesGetter);
+            var shapeAttributesPrinter = new ShapeAttributesPrinter();
+            var shapeTransformer = new ShapeTransformer();
+            var shapesAndTransformations = new ShapesAndTransformations(shapesAttributesGetter
+                , shapesVerticesGetter
+                , shapeTransformationsAttributesGetter
+                , shapeAttributesPrinter
+                , shapeTransformer);
 
             var app = new ShapesAndTransformationsConsoleRunner(shapesAndTransformations);
 

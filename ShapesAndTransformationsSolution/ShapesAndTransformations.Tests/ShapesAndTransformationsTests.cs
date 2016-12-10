@@ -180,5 +180,33 @@
 
             Assert.That(returned, Is.InstanceOf<IEnumerable<IShapeTransformationAttributes>>());
         }
+
+        [Test]
+        public void CanCreateShapeAttributesPrinter()
+        {
+            var p = new Mock<IShapeAttributesPrinter>().Object;
+        }
+
+        [Test]
+        public void CanCallPrintOnShapeAttributesPrinter()
+        {
+            var p = new Mock<IShapeAttributesPrinter>().Object;
+            p.Print();
+
+        }
+
+        [Test]
+        public void CanCreateShapeTransformer()
+        {
+            var p = new Mock<IShapeTransformer>().Object;
+        }
+
+        [Test]
+        public void CanCallTransformOnShapeTransformer()
+        {
+            var p = new Mock<IShapeTransformer>().Object;
+            p.Transform();
+
+        }
     }
 }
