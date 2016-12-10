@@ -50,6 +50,7 @@
     <Compile Include="Interfaces\IInstancesGetter.cs" />
     <Compile Include="Interfaces\IInstancesConsolePrinter.cs" />
     <Compile Include="Interfaces\IInstancePopulator.cs" />
+    <Compile Include="Interfaces\ITransform.cs" />
     <Compile Include="Interfaces\ITransformationParameters.cs" />
     <Compile Include="Interfaces\IShapeFactory.cs" />
     <Compile Include="Interfaces\IShapesGetter.cs" />
@@ -65,10 +66,14 @@
     <Compile Include="Models\ShapesGetter.cs" />
     <Compile Include="Models\Shapes\Circle.cs" />
     <Compile Include="Models\Shapes\Coordinate.cs" />
-    <Compile Include="Interfaces\ICoordinate.cs" />
+    <Compile Include="Interfaces\ICoordinatePoint.cs" />
     <Compile Include="Models\Shapes\Rectangle.cs" />
+    <Compile Include="Models\Shapes\NamedCoordinatesCollection.cs" />
     <Compile Include="Models\Shapes\Square.cs" />
     <Compile Include="Models\Shapes\Triangle.cs" />
+    <Compile Include="Models\Transformations\Move.cs" />
+    <Compile Include="Models\Transformations\Rotate.cs" />
+    <Compile Include="Models\Transformations\Scale.cs" />
     <Compile Include="Models\XmlInstanceFactory.cs" />
     <Compile Include="Models\InstancesConsolePrinter.cs" />
     <Compile Include="Models\XmlInstancesGetter.cs" />
