@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Exceptions\ShapesAndTransformationsIsNullException.cs" />
+    <Compile Include="Interfaces\IFileContentsGetter.cs" />
     <Compile Include="Interfaces\IShapeTransformer.cs" />
     <Compile Include="Interfaces\IShapeAttributesPrinter.cs" />
     <Compile Include="Interfaces\IShapeAttributes.cs" />
@@ -49,6 +50,7 @@
     <Compile Include="Interfaces\IShapeTransformationsAttributesGetter.cs" />
     <Compile Include="Interfaces\IShapeVertex.cs" />
     <Compile Include="Interfaces\IShapeVerticesGetter.cs" />
+    <Compile Include="Models\FileContentsGetter.cs" />
     <Compile Include="Models\ShapeAttributesPrinter.cs" />
     <Compile Include="Models\ShapesAttributesGetter.cs" />
     <Compile Include="Models\ShapeTransformationsAttributesGetter.cs" />

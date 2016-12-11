@@ -2,6 +2,7 @@
 {
     using Domain.Models;
     using System;
+    using System.Configuration;
     using System.Xml.Linq;
 
     class Program
@@ -10,6 +11,8 @@
         {
             var xElement = XElement.Load("App_Data/Shapes.xml");
 
+            var shapesAttributesFileName = ConfigurationManager.AppSettings["ShapesFileName"];
+            var datastoreFolderPath = ConfigurationManager.AppSettings["DatastoreFolderPath"];
 
             var shapesAttributesGetter = new ShapesAttributesGetter();
             var shapesVerticesGetter = new ShapeVerticesGetter();

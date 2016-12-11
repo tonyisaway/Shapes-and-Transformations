@@ -9,6 +9,7 @@
     using Domain.Interfaces;
     using System.Collections.Generic;
     using Domain.Models;
+    using NUnit.Framework.Constraints;
 
     [TestFixture]
     public class ShapesAndTransformationsTests
@@ -53,21 +54,28 @@
         [Test]
         public void PassingNullShapesAndTransformationsToConsoleRunnerThrowsException()
         {
+
             IShapesAndTransformations shapesAndTransformations = null;
 
-            try
-            {
-                var cr = new ShapesAndTransformationsConsoleRunner(shapesAndTransformations);
-                Assert.Fail("An exception was expected.");
-            }
-            catch(ShapesAndTransformationsIsNullException)
-            {
-                Assert.Pass(string.Format("Exception of type ShapesAndTransformationsConsoleRunner.ShapesAndTransformationsIsNullException was thrown."));
-            }
-            catch(Exception ex)
-            {
-                Assert.Fail(string.Format("Exception of type '{0}' caught '{1}'.", ex.GetType(), ex.Message));
-            }
+            //Act
+            ActualValueDelegate<object> testDelegate = () => new ShapesAndTransformationsConsoleRunner(shapesAndTransformations);
+
+            //Assert
+            Assert.That(testDelegate, Throws.TypeOf<ShapesAndTransformationsIsNullException>());
+
+            //try
+            //{
+            //    var cr = new ShapesAndTransformationsConsoleRunner(shapesAndTransformations);
+            //    Assert.Fail("An exception was expected.");
+            //}
+            //catch(ShapesAndTransformationsIsNullException)
+            //{
+            //    Assert.Pass(string.Format("Exception of type ShapesAndTransformationsConsoleRunner.ShapesAndTransformationsIsNullException was thrown."));
+            //}
+            //catch(Exception ex)
+            //{
+            //    Assert.Fail(string.Format("Exception of type '{0}' caught '{1}'.", ex.GetType(), ex.Message));
+            //}
         }
 
         [Test]

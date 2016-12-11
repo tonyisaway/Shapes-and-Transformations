@@ -6,7 +6,7 @@
     public class ShapesAttributesGetterTester
     {
         [Test]
-        public void Test()
+        public void CanConstructWithSourceFilePath()
         {
 
         }
