@@ -8,25 +8,21 @@
     public class ShapesAndTransformations : IShapesAndTransformations
     {
         INameWithNamedAttributesGetter shapesAttributesGetter;
-        IShapeVerticesGetter shapesVerticesGetter;
         INameWithNamedAttributesGetter transformationsAttributesGetter;
-        INameWithNamedAttributesConsolePrinter shapeAttributesPrinter;
-        IShapeTransformer shapeTransformer;
+        INameWithNamedAttributesConsolePrinter attributesPrinter;
+        IShapeTransforGetter shapeTransformer;
 
         IEnumerable<INameWithNamedAttributes> shapesAttributes;
         IEnumerable<INameWithNamedAttributes> transformsAttributes;
 
-        public ShapesAndTransformations(INameWithNamedAttributesGetter shapesAttributesGetter
-            , IShapeVerticesGetter shapesVerticesGetter
-            , INameWithNamedAttributesGetter transformationsAttributesGetter
-            , INameWithNamedAttributesConsolePrinter shapeAttributesPrinter
-            , IShapeTransformer shapeTransformer)
+        public ShapesAndTransformations(NameWithNamedAttributesGetter shapesAttributesGetter
+            , NameWithNamedAttributesGetter transformationsAttributesGetter
+            , NameWithNamedAttributesConsolePrinter attributesPrinter
+            , ShapeTransformGetter shapeTransformer)
         {
-            // TODO: These cannot be null
             this.shapesAttributesGetter = shapesAttributesGetter;
-            this.shapesVerticesGetter = shapesVerticesGetter;
             this.transformationsAttributesGetter = transformationsAttributesGetter;
-            this.shapeAttributesPrinter = shapeAttributesPrinter;
+            this.attributesPrinter = attributesPrinter;
             this.shapeTransformer = shapeTransformer;
 
             LoadShapes();
@@ -48,14 +44,16 @@
         public void PrintShapes()
         {
             Console.WriteLine("Printing shapes");
-            shapeAttributesPrinter.Print(shapesAttributes);
+            attributesPrinter.Print(shapesAttributes);
         }
 
         public void TransformShapes()
         {
             Console.WriteLine("Transforming shapes");
-            var shapeVertices = shapesVerticesGetter.Get();
-            shapeTransformer.Transform();
+            foreach (var shapesAttribute in shapesAttributes)
+            {
+                shapeTransformer.TransformGet(shapesAttribute, transformsAttributes);
+            }
         }
     }
 }

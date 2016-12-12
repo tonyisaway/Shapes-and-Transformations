@@ -12,7 +12,7 @@
         {
             var xElement = XElement.Load("App_Data/Shapes.xml");
 
-            var datastoreFolderPath = Path.Combine(ConfigurationManager.AppSettings["DatastoreFolderPath"], Environment.CurrentDirectory);
+            var datastoreFolderPath = Environment.CurrentDirectory + ConfigurationManager.AppSettings["DatastoreFolderPath"];
 
             var shapesAttributesFileName = ConfigurationManager.AppSettings["ShapesFileName"];
             var shapesfileContentsGetter = new FileContentsGetter(datastoreFolderPath + "/" + shapesAttributesFileName);
@@ -24,11 +24,14 @@
             var xElementToTransformationsAttributesConvertor = new XElementToNameWithNamedAttributesConvertor();
             var shapeTransformationsAttributesGetter = new NameWithNamedAttributesGetter(transformationsfileContentsGetter, xElementToTransformationsAttributesConvertor);
 
-            var shapesVerticesGetter = new ShapeVerticesGetter();
             var shapeAttributesPrinter = new NameWithNamedAttributesConsolePrinter();
-            var shapeTransformer = new ShapeTransformer();
+
+            var shapeVerticesGetter = new ShapeVerticesGetter();
+            var shapeCommandGetter = new ShapeCommandGetter();
+            var verticiesConvertor = new VerticiesToNameWithNamedAttributesConverter();
+            var shapeTransformer = new ShapeTransformGetter(shapeVerticesGetter, shapeCommandGetter, verticiesConvertor);
+
             var shapesAndTransformations = new ShapesAndTransformations(xmlShapesAttributesGetter
-                , shapesVerticesGetter
                 , shapeTransformationsAttributesGetter
                 , shapeAttributesPrinter
                 , shapeTransformer);

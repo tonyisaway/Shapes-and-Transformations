@@ -119,14 +119,14 @@
         public void CanCallGetOnShapeVerticesGetter()
         {
             var g = new Mock<IShapeVerticesGetter>().Object;
-            g.Get();
+            g.Get(new Mock<INameWithNamedAttributes>().Object);
         }
 
         [Test]
         public void WhenCallingGetOnShapeVerticesGetterThenReturnedIsNotNull()
         {
             var g = new ShapeVerticesGetter();
-            var returned = g.Get();
+            var returned = g.Get(new Mock<INameWithNamedAttributes>().Object);
 
             Assert.That(returned, Is.Not.Null);
         }
@@ -135,7 +135,7 @@
         public void WhenCallingGetOnShapeVerticesGetterThenReturnedIsCorrectInstanceOf()
         {
             var g = new ShapeVerticesGetter();
-            var returned = g.Get();
+            var returned = g.Get(new Mock<INameWithNamedAttributes>().Object);
 
             Assert.That(returned, Is.InstanceOf<IEnumerable<IShapeVertex>>());
         }
@@ -158,15 +158,14 @@
         [Test]
         public void CanCreateShapeTransformer()
         {
-            var p = new Mock<IShapeTransformer>().Object;
+            var p = new Mock<IShapeTransforGetter>().Object;
         }
 
         [Test]
         public void CanCallTransformOnShapeTransformer()
         {
-            var p = new Mock<IShapeTransformer>().Object;
-            p.Transform();
-
+            var p = new Mock<IShapeTransforGetter>().Object;
+            p.Transform(new Mock<INameWithNamedAttributes>().Object, new Mock<INameWithNamedAttributes>().Object);
         }
 
         [Test]
