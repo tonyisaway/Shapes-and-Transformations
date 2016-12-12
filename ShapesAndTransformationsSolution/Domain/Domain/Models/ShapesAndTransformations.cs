@@ -19,14 +19,14 @@
         public ShapesAndTransformations(INameWithNamedAttributesGetter shapesAttributesGetter
             , IShapeVerticesGetter shapesVerticesGetter
             , INameWithNamedAttributesGetter transformationsAttributesGetter
-            , INameWithNamedAttributesConsolePrinter NameWithNamedAttributesPrinter
+            , INameWithNamedAttributesConsolePrinter shapeAttributesPrinter
             , IShapeTransformer shapeTransformer)
         {
             // TODO: These cannot be null
             this.shapesAttributesGetter = shapesAttributesGetter;
             this.shapesVerticesGetter = shapesVerticesGetter;
             this.transformationsAttributesGetter = transformationsAttributesGetter;
-            this.shapeAttributesPrinter = NameWithNamedAttributesPrinter;
+            this.shapeAttributesPrinter = shapeAttributesPrinter;
             this.shapeTransformer = shapeTransformer;
 
             LoadShapes();

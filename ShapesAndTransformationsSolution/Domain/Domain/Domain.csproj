@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="Exceptions\ShapesAndTransformationsIsNullException.cs" />
     <Compile Include="Interfaces\IFileContentsGetter.cs" />
+    <Compile Include="Interfaces\IShapeCommand.cs" />
+    <Compile Include="Interfaces\IShapeCommandsGetter.cs" />
     <Compile Include="Interfaces\IShapeTransformer.cs" />
     <Compile Include="Interfaces\INameWithNamedAttributesPrinter.cs" />
     <Compile Include="Interfaces\INameWithNamedAttributes.cs" />
@@ -53,6 +55,8 @@
     <Compile Include="Models\NameWithNamedAttributes.cs" />
     <Compile Include="Models\NameWithNamedAttributesPrinter.cs" />
     <Compile Include="Models\NameWithNamedAttributesGetter.cs" />
+    <Compile Include="Models\ShapeCommand.cs" />
+    <Compile Include="Models\ShapeCommandsGetter.cs" />
     <Compile Include="Models\ShapeTransformer.cs" />
     <Compile Include="Models\ShapeVerticesGetter.cs" />
     <Compile Include="Models\XElementToNameWithNamedAttributesConvertor.cs" />
