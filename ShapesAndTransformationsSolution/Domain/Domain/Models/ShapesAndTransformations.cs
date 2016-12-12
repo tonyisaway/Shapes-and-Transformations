@@ -12,6 +12,7 @@
         INameWithNamedAttributesGetter transformationsAttributesGetter;
         INameWithNamedAttributesConsolePrinter shapeAttributesPrinter;
         IShapeTransformer shapeTransformer;
+
         IEnumerable<INameWithNamedAttributes> shapesAttributes;
         IEnumerable<INameWithNamedAttributes> transformsAttributes;
 
@@ -27,15 +28,18 @@
             this.transformationsAttributesGetter = transformationsAttributesGetter;
             this.shapeAttributesPrinter = NameWithNamedAttributesPrinter;
             this.shapeTransformer = shapeTransformer;
+
+            LoadShapes();
+            LoadTransforms();
         }
 
-        public void LoadShapes()
+        void LoadShapes()
         {
             Console.WriteLine("Loading shapes");
             shapesAttributes = shapesAttributesGetter.Get();
         }
 
-        public void LoadTransforms()
+        void LoadTransforms()
         {
             Console.WriteLine("Loading transforms");
             transformsAttributes = transformationsAttributesGetter.Get();

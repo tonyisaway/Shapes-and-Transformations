@@ -21,24 +21,6 @@
         }
 
         [Test]
-        public void ShapesAndTransformationsHasLoadShapes()
-        {
-            new Mock<IShapesAndTransformations>().Object.LoadShapes();
-        }
-
-        [Test]
-        public void ShapesAndTransformationsHasPrintShapes()
-        {
-            new Mock<IShapesAndTransformations>().Object.PrintShapes();
-        }
-
-        [Test]
-        public void ShapesAndTransformationsHasLoadTransforms()
-        {
-            new Mock<IShapesAndTransformations>().Object.LoadTransforms();
-        }
-
-        [Test]
         public void ShapesAndTransformationsHasTransformShapes()
         {
             new Mock<IShapesAndTransformations>().Object.TransformShapes();

@@ -25,7 +25,6 @@
         {
             Console.WriteLine("Starting Run");
             Console.WriteLine();
-            shapesAndTransformations.LoadShapes();
             shapesAndTransformations.PrintShapes();
             shapesAndTransformations.TransformShapes();
             shapesAndTransformations.PrintShapes();
