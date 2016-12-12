@@ -2,6 +2,6 @@
 {
     public interface IFileContentsGetter
     {
-        void Get();
+        string Get();
     }
 }

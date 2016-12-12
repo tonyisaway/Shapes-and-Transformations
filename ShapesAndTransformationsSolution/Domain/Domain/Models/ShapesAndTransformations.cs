@@ -3,45 +3,48 @@
     using System;
     using Contracts;
     using Interfaces;
+    using System.Collections.Generic;
 
     public class ShapesAndTransformations : IShapesAndTransformations
     {
-        IShapesAttributesGetter shapesAttributesGetter;
+        INameWithNamedAttributesGetter shapesAttributesGetter;
         IShapeVerticesGetter shapesVerticesGetter;
-        IShapeTransformationsAttributesGetter shapeTransformationsAttributesGetter;
-        IShapeAttributesPrinter shapeAttributesPrinter;
+        INameWithNamedAttributesGetter transformationsAttributesGetter;
+        INameWithNamedAttributesConsolePrinter shapeAttributesPrinter;
         IShapeTransformer shapeTransformer;
+        IEnumerable<INameWithNamedAttributes> shapesAttributes;
+        IEnumerable<INameWithNamedAttributes> transformsAttributes;
 
-        public ShapesAndTransformations(IShapesAttributesGetter shapesAttributesGetter
+        public ShapesAndTransformations(INameWithNamedAttributesGetter shapesAttributesGetter
             , IShapeVerticesGetter shapesVerticesGetter
-            , IShapeTransformationsAttributesGetter shapeTransformationsAttributesGetter
-            , IShapeAttributesPrinter shapeAttributesPrinter
+            , INameWithNamedAttributesGetter transformationsAttributesGetter
+            , INameWithNamedAttributesConsolePrinter NameWithNamedAttributesPrinter
             , IShapeTransformer shapeTransformer)
         {
             // TODO: These cannot be null
             this.shapesAttributesGetter = shapesAttributesGetter;
             this.shapesVerticesGetter = shapesVerticesGetter;
-            this.shapeTransformationsAttributesGetter = shapeTransformationsAttributesGetter;
-            this.shapeAttributesPrinter = shapeAttributesPrinter;
+            this.transformationsAttributesGetter = transformationsAttributesGetter;
+            this.shapeAttributesPrinter = NameWithNamedAttributesPrinter;
             this.shapeTransformer = shapeTransformer;
         }
 
         public void LoadShapes()
         {
             Console.WriteLine("Loading shapes");
-            var shapeAttributes = shapesAttributesGetter.Get();
+            shapesAttributes = shapesAttributesGetter.Get();
         }
 
         public void LoadTransforms()
         {
             Console.WriteLine("Loading transforms");
-            var shapeTransformationAttributes = shapeTransformationsAttributesGetter.Get();
+            transformsAttributes = transformationsAttributesGetter.Get();
         }
 
         public void PrintShapes()
         {
             Console.WriteLine("Printing shapes");
-            shapeAttributesPrinter.Print();
+            shapeAttributesPrinter.Print(shapesAttributes);
         }
 
         public void TransformShapes()

@@ -1,6 +1,5 @@
 ﻿namespace Domain.Models
 {
-    using System;
     using Interfaces;
 
     public class FileContentsGetter : IFileContentsGetter
@@ -12,9 +11,6 @@
             this.filePath = filePath;
         }
 
-        public void Get()
-        {
-            // throw new NotImplementedException();
-        }
+        public string Get() => System.IO.File.ReadAllText(filePath);
     }
 }

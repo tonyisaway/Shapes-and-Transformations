@@ -43,19 +43,19 @@
     <Compile Include="Exceptions\ShapesAndTransformationsIsNullException.cs" />
     <Compile Include="Interfaces\IFileContentsGetter.cs" />
     <Compile Include="Interfaces\IShapeTransformer.cs" />
-    <Compile Include="Interfaces\IShapeAttributesPrinter.cs" />
-    <Compile Include="Interfaces\IShapeAttributes.cs" />
-    <Compile Include="Interfaces\IShapesAttributesGetter.cs" />
-    <Compile Include="Interfaces\IShapeTransformationAttributes.cs" />
-    <Compile Include="Interfaces\IShapeTransformationsAttributesGetter.cs" />
+    <Compile Include="Interfaces\INameWithNamedAttributesPrinter.cs" />
+    <Compile Include="Interfaces\INameWithNamedAttributes.cs" />
+    <Compile Include="Interfaces\INameWithNamedAttributesGetter.cs" />
     <Compile Include="Interfaces\IShapeVertex.cs" />
     <Compile Include="Interfaces\IShapeVerticesGetter.cs" />
+    <Compile Include="Interfaces\IXElementToNameWithNamedAttributesConvertor.cs" />
     <Compile Include="Models\FileContentsGetter.cs" />
-    <Compile Include="Models\ShapeAttributesPrinter.cs" />
-    <Compile Include="Models\ShapesAttributesGetter.cs" />
-    <Compile Include="Models\ShapeTransformationsAttributesGetter.cs" />
+    <Compile Include="Models\NameWithNamedAttributes.cs" />
+    <Compile Include="Models\NameWithNamedAttributesPrinter.cs" />
+    <Compile Include="Models\NameWithNamedAttributesGetter.cs" />
     <Compile Include="Models\ShapeTransformer.cs" />
     <Compile Include="Models\ShapeVerticesGetter.cs" />
+    <Compile Include="Models\XElementToNameWithNamedAttributesConvertor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\ShapesAndTransformations.cs" />
   </ItemGroup>

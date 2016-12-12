@@ -81,38 +81,44 @@
         [Test]
         public void CanCreateShapeAttributes()
         {
-            var sa = new Mock<IShapeAttributes>().Object;
+            var sa = new Mock<INameWithNamedAttributes>().Object;
         }
 
         [Test]
         public void CanCreateShapeAttributesGetter()
         {
-            var g = new Mock<IShapesAttributesGetter>().Object;
+            var g = new Mock<INameWithNamedAttributesGetter>().Object;
         }
 
         [Test]
         public void CanCallGetOnShapeAttributesGetter()
         {
-            var g = new Mock<IShapesAttributesGetter>().Object;
+            var g = new Mock<INameWithNamedAttributesGetter>().Object;
             g.Get();
         }
 
         [Test]
         public void WhenCallingGetOnShapeAttributesGetterThenReturnedIsNotNull()
         {
-            var g = new ShapesAttributesGetter();
+            var g = GetNameWithNamedAttributesGetter();
             var returned = g.Get();
 
             Assert.That(returned, Is.Not.Null);
         }
 
+        static NameWithNamedAttributesGetter GetNameWithNamedAttributesGetter()
+        {
+            return new NameWithNamedAttributesGetter(new Mock<IFileContentsGetter>().Object
+                , new Mock<IXElementToNameWithNamedAttributesConvertor>().Object);
+        }
+
         [Test]
         public void WhenCallingGetOnShapeAttributesGetterThenReturnedIsCorrectInstanceOf()
         {
-            var g = new ShapesAttributesGetter();
+            var g = GetNameWithNamedAttributesGetter();
             var returned = g.Get();
 
-            Assert.That(returned, Is.InstanceOf<IEnumerable<IShapeAttributes>>());
+            Assert.That(returned, Is.InstanceOf<IEnumerable<INameWithNamedAttributes>>());
         }
 
         [Test]
@@ -151,55 +157,19 @@
 
             Assert.That(returned, Is.InstanceOf<IEnumerable<IShapeVertex>>());
         }
-
-        [Test]
-        public void CanCreateShapeTransformationAttributes()
-        {
-            var sa = new Mock<IShapeTransformationAttributes>().Object;
-        }
-
-        [Test]
-        public void CanCreateShapeTransformationsAttributesGetter()
-        {
-            var g = new Mock<IShapeTransformationsAttributesGetter>().Object;
-        }
-
-        [Test]
-        public void CanCallGetOnShapeTransformationsAttributesGetter()
-        {
-            var g = new Mock<IShapeTransformationsAttributesGetter>().Object;
-            g.Get();
-        }
-
-        [Test]
-        public void WhenCallingGetOnShapeTransformationsAttributesGetterThenReturnedIsNotNull()
-        {
-            var g = new ShapeTransformationsAttributesGetter();
-            var returned = g.Get();
-
-            Assert.That(returned, Is.Not.Null);
-        }
-
-        [Test]
-        public void WhenCallingGetOnShapeTransformationsAttributesGetterThenReturnedIsCorrectInstanceOf()
-        {
-            var g = new ShapeTransformationsAttributesGetter();
-            var returned = g.Get();
-
-            Assert.That(returned, Is.InstanceOf<IEnumerable<IShapeTransformationAttributes>>());
-        }
-
+        
         [Test]
         public void CanCreateShapeAttributesPrinter()
         {
-            var p = new Mock<IShapeAttributesPrinter>().Object;
+            var p = new Mock<INameWithNamedAttributesConsolePrinter>().Object;
         }
 
         [Test]
         public void CanCallPrintOnShapeAttributesPrinter()
         {
-            var p = new Mock<IShapeAttributesPrinter>().Object;
-            p.Print();
+            var p = new Mock<INameWithNamedAttributesConsolePrinter>().Object;
+            var attributes = new List<INameWithNamedAttributes>();
+            p.Print(attributes);
 
         }
 
