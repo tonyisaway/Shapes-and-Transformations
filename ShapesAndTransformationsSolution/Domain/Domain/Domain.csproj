@@ -50,6 +50,7 @@
     <Compile Include="Interfaces\IShapeCommandsGetter.cs" />
     <Compile Include="Interfaces\IShapeVertex.cs" />
     <Compile Include="Interfaces\IShapeVerticesGetter.cs" />
+    <Compile Include="Interfaces\IVerticiesToNameWithNamedAttributesConverter.cs" />
     <Compile Include="Interfaces\IXElementToNameWithNamedAttributesConvertor.cs" />
     <Compile Include="Models\FileContentsGetter.cs" />
     <Compile Include="Commands\RotateCommand.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="Models\ShapeCommandGetter.cs" />
     <Compile Include="Models\ShapeCommandsGetter.cs" />
     <Compile Include="Models\ShapeVerticesGetter.cs" />
+    <Compile Include="Models\VerticiesToNameWithNamedAttributesConverter.cs" />
     <Compile Include="Models\XElementToNameWithNamedAttributesConvertor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\ShapesAndTransformations.cs" />

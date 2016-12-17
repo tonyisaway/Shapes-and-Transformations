@@ -10,7 +10,7 @@
         INameWithNamedAttributesGetter shapesAttributesGetter;
         IShapeVerticesGetter shapeVerticesGetter;
         INameWithNamedAttributesGetter transformationsAttributesGetter;
-        INameWithNamedAttributesConsolePrinter shapeAttributesPrinter;
+        INameWithNamedAttributesConsolePrinter attributesPrinter;
         IShapeCommandsGetter shapeCommandsGetter;
 
         IEnumerable<INameWithNamedAttributes> shapesAttributes;
@@ -19,14 +19,13 @@
         public ShapesAndTransformations(INameWithNamedAttributesGetter shapesAttributesGetter
             , IShapeVerticesGetter shapeVerticesGetter
             , INameWithNamedAttributesGetter transformationsAttributesGetter
-            , INameWithNamedAttributesConsolePrinter shapeAttributesPrinter
+            , INameWithNamedAttributesConsolePrinter attributesPrinter
             , IShapeCommandsGetter shapeCommandsGetter)
         {
-            // TODO: These cannot be null
             this.shapesAttributesGetter = shapesAttributesGetter;
             this.shapeVerticesGetter = shapeVerticesGetter;
             this.transformationsAttributesGetter = transformationsAttributesGetter;
-            this.shapeAttributesPrinter = shapeAttributesPrinter;
+            this.attributesPrinter = attributesPrinter;
             this.shapeCommandsGetter = shapeCommandsGetter;
 
             LoadShapes();
@@ -48,7 +47,7 @@
         public void PrintShapes()
         {
             Console.WriteLine("Printing shapes");
-            shapeAttributesPrinter.Print(shapesAttributes);
+            attributesPrinter.Print(shapesAttributes);
         }
 
         public void TransformShapes()

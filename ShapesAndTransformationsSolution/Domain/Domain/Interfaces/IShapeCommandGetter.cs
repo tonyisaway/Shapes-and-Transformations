@@ -5,3 +5,4 @@
         IShapeCommand Get(INameWithNamedAttributes instructions);
     }
 }
+

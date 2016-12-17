@@ -12,7 +12,7 @@
         {
             var xElement = XElement.Load("App_Data/Shapes.xml");
 
-            var datastoreFolderPath = Path.Combine(ConfigurationManager.AppSettings["DatastoreFolderPath"], Environment.CurrentDirectory);
+            var datastoreFolderPath = Environment.CurrentDirectory + ConfigurationManager.AppSettings["DatastoreFolderPath"];
 
             var shapesAttributesFileName = ConfigurationManager.AppSettings["ShapesFileName"];
             var shapesfileContentsGetter = new FileContentsGetter(datastoreFolderPath + "/" + shapesAttributesFileName);
