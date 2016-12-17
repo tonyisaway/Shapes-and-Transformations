@@ -1,7 +1,7 @@
 ﻿namespace ShapesAndTransformations.Tests
 {
     using Core.Interfaces;
-    using Core.Services;
+    using Infrastructure.Data;
     using Moq;
     using NUnit.Framework;
 

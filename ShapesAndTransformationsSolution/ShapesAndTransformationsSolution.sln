@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication", "ConsoleApplication\ConsoleApplication.csproj", "{DD0263CE-D7BC-425D-AF31-5A0EF78582CF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "ConsoleApplication\UI.csproj", "{DD0263CE-D7BC-425D-AF31-5A0EF78582CF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapesAndTransformations.Tests", "ShapesAndTransformations.Tests\ShapesAndTransformations.Tests.csproj", "{859B30D5-A619-43C1-95A1-521C874621AE}"
 EndProject

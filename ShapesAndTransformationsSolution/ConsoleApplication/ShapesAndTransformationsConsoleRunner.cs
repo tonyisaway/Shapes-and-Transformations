@@ -1,4 +1,4 @@
-﻿namespace ConsoleApplication
+﻿namespace UI
 {
     using Core.Interfaces;
     using Core.Services.Exceptions;

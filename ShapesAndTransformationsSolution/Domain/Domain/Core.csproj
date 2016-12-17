@@ -53,7 +53,6 @@
     <Compile Include="Interfaces\IShapeVerticesGetter.cs" />
     <Compile Include="Interfaces\IVerticiesToNameWithNamedAttributesConverter.cs" />
     <Compile Include="Interfaces\IXElementToNameWithNamedAttributesConvertor.cs" />
-    <Compile Include="Services\FileContentsGetter.cs" />
     <Compile Include="Services\Commands\RotateCommand.cs" />
     <Compile Include="Interfaces\IShapeCommandGetter.cs" />
     <Compile Include="Models\NameWithNamedAttributes.cs" />

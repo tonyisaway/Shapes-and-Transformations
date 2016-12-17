@@ -1,6 +1,7 @@
-﻿namespace ConsoleApplication
+﻿namespace UI
 {
     using Core.Services;
+    using Infrastructure.Data;
     using System;
     using System.Configuration;
     using System.Xml.Linq;

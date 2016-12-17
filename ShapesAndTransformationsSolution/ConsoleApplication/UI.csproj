@@ -63,7 +63,7 @@
       <Name>Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj">
-      <Project>{9e243e8f-71f4-4cf4-b1bf-6f3a0c424188}</Project>
+      <Project>{9E243E8F-71F4-4CF4-B1BF-6F3A0C424188}</Project>
       <Name>Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>

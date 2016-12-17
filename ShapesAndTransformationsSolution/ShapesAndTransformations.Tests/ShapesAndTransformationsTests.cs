@@ -1,6 +1,6 @@
 ﻿namespace ShapesAndTransformations.Tests
 {
-    using ConsoleApplication;
+    using UI;
     using Core.Interfaces;
     using Core.Services;
     using Core.Services.Exceptions;

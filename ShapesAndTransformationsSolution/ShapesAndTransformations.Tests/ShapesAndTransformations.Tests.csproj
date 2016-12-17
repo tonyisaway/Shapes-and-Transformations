@@ -74,13 +74,17 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ConsoleApplication\ConsoleApplication.csproj">
+    <ProjectReference Include="..\ConsoleApplication\UI.csproj">
       <Project>{DD0263CE-D7BC-425D-AF31-5A0EF78582CF}</Project>
-      <Name>ConsoleApplication</Name>
+      <Name>UI</Name>
     </ProjectReference>
     <ProjectReference Include="..\Domain\Domain\Core.csproj">
       <Project>{060a02c3-27ef-4912-b3fc-cd62eadad118}</Project>
       <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj">
+      <Project>{9E243E8F-71F4-4CF4-B1BF-6F3A0C424188}</Project>
+      <Name>Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

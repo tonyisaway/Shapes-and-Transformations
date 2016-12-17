@@ -1,6 +1,6 @@
-﻿namespace Core.Services
+﻿namespace Infrastructure.Data
 {
-    using Interfaces;
+    using Core.Interfaces;
 
     public class FileContentsGetter : IFileContentsGetter
     {
