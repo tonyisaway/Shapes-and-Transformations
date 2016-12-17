@@ -78,13 +78,9 @@
       <Project>{DD0263CE-D7BC-425D-AF31-5A0EF78582CF}</Project>
       <Name>ConsoleApplication</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Domain\Domain\Domain.csproj">
+    <ProjectReference Include="..\Domain\Domain\Core.csproj">
       <Project>{060a02c3-27ef-4912-b3fc-cd62eadad118}</Project>
-      <Name>Domain</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\UiContracts\Contracts.csproj">
-      <Project>{d843d54b-e733-4d36-942d-fd702776aa2b}</Project>
-      <Name>Contracts</Name>
+      <Name>Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

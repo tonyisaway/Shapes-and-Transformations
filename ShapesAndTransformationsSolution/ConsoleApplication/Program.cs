@@ -1,9 +1,8 @@
 ﻿namespace ConsoleApplication
 {
-    using Domain.Models;
+    using Core.Services;
     using System;
     using System.Configuration;
-    using System.IO;
     using System.Xml.Linq;
 
     class Program

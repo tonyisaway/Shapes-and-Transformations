@@ -1,15 +1,13 @@
 ﻿namespace ShapesAndTransformations.Tests
 {
-    using NUnit.Framework;
-    using Contracts;
-    using Moq;
     using ConsoleApplication;
-    using System;
-    using Domain.Exceptions;
-    using Domain.Interfaces;
-    using System.Collections.Generic;
-    using Domain.Models;
+    using Core.Interfaces;
+    using Core.Services;
+    using Core.Services.Exceptions;
+    using Moq;
+    using NUnit.Framework;
     using NUnit.Framework.Constraints;
+    using System.Collections.Generic;
 
     [TestFixture]
     public class ShapesAndTransformationsTests

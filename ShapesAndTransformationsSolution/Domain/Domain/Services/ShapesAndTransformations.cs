@@ -1,8 +1,7 @@
-﻿namespace Domain.Models
+﻿namespace Core.Services
 {
-    using System;
-    using Contracts;
     using Interfaces;
+    using System;
     using System.Collections.Generic;
 
     public class ShapesAndTransformations : IShapesAndTransformations

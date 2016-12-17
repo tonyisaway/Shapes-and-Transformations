@@ -1,8 +1,9 @@
-﻿namespace Domain.Models
+﻿namespace Core.Services
 {
-    using System.Xml.Linq;
     using Interfaces;
+    using Models;
     using System.Collections.Generic;
+    using System.Xml.Linq;
 
     public class XElementToNameWithNamedAttributesConvertor : IXElementToNameWithNamedAttributesConvertor
     {

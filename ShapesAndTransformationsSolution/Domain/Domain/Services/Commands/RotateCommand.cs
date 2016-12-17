@@ -1,4 +1,4 @@
-﻿namespace Domain.Commands
+﻿namespace Core.Services.Commands
 {
     using Interfaces;
     using System.Collections.Generic;

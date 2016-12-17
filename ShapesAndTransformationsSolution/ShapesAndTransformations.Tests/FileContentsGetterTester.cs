@@ -1,9 +1,9 @@
 ﻿namespace ShapesAndTransformations.Tests
 {
+    using Core.Interfaces;
+    using Core.Services;
     using Moq;
     using NUnit.Framework;
-    using Domain.Models;
-    using Domain.Interfaces;
 
     [TestFixture]
     public class FileContentsGetterTester

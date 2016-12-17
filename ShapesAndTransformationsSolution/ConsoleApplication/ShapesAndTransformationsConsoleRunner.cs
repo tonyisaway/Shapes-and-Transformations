@@ -1,8 +1,8 @@
 ﻿namespace ConsoleApplication
 {
+    using Core.Interfaces;
+    using Core.Services.Exceptions;
     using System;
-    using Contracts;
-    using Domain.Exceptions;
 
     public class ShapesAndTransformationsConsoleRunner
     {

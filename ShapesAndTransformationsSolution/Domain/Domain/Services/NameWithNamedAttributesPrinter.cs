@@ -1,4 +1,4 @@
-﻿namespace Domain.Models
+﻿namespace Core.Services
 {
     using Interfaces;
     using System;

@@ -54,18 +54,18 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Domain\Domain\Domain.csproj">
-      <Project>{060a02c3-27ef-4912-b3fc-cd62eadad118}</Project>
-      <Name>Domain</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\UiContracts\Contracts.csproj">
-      <Project>{d843d54b-e733-4d36-942d-fd702776aa2b}</Project>
-      <Name>Contracts</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="App_Data\Shapes.xml" />
     <Content Include="App_Data\Transformations.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain\Core.csproj">
+      <Project>{060a02c3-27ef-4912-b3fc-cd62eadad118}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj">
+      <Project>{9e243e8f-71f4-4cf4-b1bf-6f3a0c424188}</Project>
+      <Name>Infrastructure</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

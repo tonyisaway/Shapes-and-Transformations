@@ -7,8 +7,8 @@
     <ProjectGuid>{060A02C3-27EF-4912-B3FC-CD62EADAD118}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Domain</RootNamespace>
-    <AssemblyName>Domain</AssemblyName>
+    <RootNamespace>Core</RootNamespace>
+    <AssemblyName>Core</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,39 +40,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commands\NoCommand.cs" />
-    <Compile Include="Exceptions\ShapesAndTransformationsIsNullException.cs" />
+    <Compile Include="Services\Commands\NoCommand.cs" />
+    <Compile Include="Services\Exceptions\ShapesAndTransformationsIsNullException.cs" />
     <Compile Include="Interfaces\IFileContentsGetter.cs" />
     <Compile Include="Interfaces\INameWithNamedAttributes.cs" />
     <Compile Include="Interfaces\INameWithNamedAttributesGetter.cs" />
     <Compile Include="Interfaces\INameWithNamedAttributesPrinter.cs" />
     <Compile Include="Interfaces\IShapeCommand.cs" />
     <Compile Include="Interfaces\IShapeCommandsGetter.cs" />
+    <Compile Include="Interfaces\IShapesAndTransformations.cs" />
     <Compile Include="Interfaces\IShapeVertex.cs" />
     <Compile Include="Interfaces\IShapeVerticesGetter.cs" />
     <Compile Include="Interfaces\IVerticiesToNameWithNamedAttributesConverter.cs" />
     <Compile Include="Interfaces\IXElementToNameWithNamedAttributesConvertor.cs" />
-    <Compile Include="Models\FileContentsGetter.cs" />
-    <Compile Include="Commands\RotateCommand.cs" />
+    <Compile Include="Services\FileContentsGetter.cs" />
+    <Compile Include="Services\Commands\RotateCommand.cs" />
     <Compile Include="Interfaces\IShapeCommandGetter.cs" />
     <Compile Include="Models\NameWithNamedAttributes.cs" />
-    <Compile Include="Models\NameWithNamedAttributesPrinter.cs" />
-    <Compile Include="Models\NameWithNamedAttributesGetter.cs" />
-    <Compile Include="Commands\MoveCommand.cs" />
-    <Compile Include="Commands\ScaleCommand.cs" />
-    <Compile Include="Models\ShapeCommandGetter.cs" />
-    <Compile Include="Models\ShapeCommandsGetter.cs" />
-    <Compile Include="Models\ShapeVerticesGetter.cs" />
-    <Compile Include="Models\VerticiesToNameWithNamedAttributesConverter.cs" />
-    <Compile Include="Models\XElementToNameWithNamedAttributesConvertor.cs" />
+    <Compile Include="Services\NameWithNamedAttributesPrinter.cs" />
+    <Compile Include="Services\NameWithNamedAttributesGetter.cs" />
+    <Compile Include="Services\Commands\MoveCommand.cs" />
+    <Compile Include="Services\Commands\ScaleCommand.cs" />
+    <Compile Include="Services\ShapeCommandGetter.cs" />
+    <Compile Include="Services\ShapeCommandsGetter.cs" />
+    <Compile Include="Services\ShapeVerticesGetter.cs" />
+    <Compile Include="Services\VerticiesToNameWithNamedAttributesConverter.cs" />
+    <Compile Include="Services\XElementToNameWithNamedAttributesConvertor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Models\ShapesAndTransformations.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\UiContracts\Contracts.csproj">
-      <Project>{d843d54b-e733-4d36-942d-fd702776aa2b}</Project>
-      <Name>Contracts</Name>
-    </ProjectReference>
+    <Compile Include="Services\ShapesAndTransformations.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

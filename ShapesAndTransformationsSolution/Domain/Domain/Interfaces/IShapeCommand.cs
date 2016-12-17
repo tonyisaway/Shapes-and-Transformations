@@ -1,9 +1,7 @@
-﻿using System.Collections.Generic;
-
-namespace Domain.Interfaces
+﻿namespace Core.Interfaces
 {
     using System.Collections.Generic;
-
+    
     public interface IShapeCommand
     {
         void Execute(IEnumerable<IShapeVertex> vertices);

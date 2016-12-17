@@ -1,4 +1,4 @@
-﻿namespace Domain.Models
+﻿namespace Core.Models
 {
     using Interfaces;
     using System.Collections.Generic;
