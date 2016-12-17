@@ -24,14 +24,16 @@
             var xElementToTransformationsAttributesConvertor = new XElementToNameWithNamedAttributesConvertor();
             var shapeTransformationsAttributesGetter = new NameWithNamedAttributesGetter(transformationsfileContentsGetter, xElementToTransformationsAttributesConvertor);
 
-            var shapesVerticesGetter = new ShapeVerticesGetter();
+            var shapeVerticesGetter = new ShapeVerticesGetter();
             var shapeAttributesPrinter = new NameWithNamedAttributesConsolePrinter();
-            var shapeTransformer = new ShapeTransformer();
+
+            var shapeCommandGetter = new ShapeCommandGetter();
+            var shapeCommandsGetter = new ShapeCommandsGetter(shapeCommandGetter);
             var shapesAndTransformations = new ShapesAndTransformations(xmlShapesAttributesGetter
-                , shapesVerticesGetter
+                , shapeVerticesGetter
                 , shapeTransformationsAttributesGetter
                 , shapeAttributesPrinter
-                , shapeTransformer);
+                , shapeCommandsGetter);
 
             var app = new ShapesAndTransformationsConsoleRunner(shapesAndTransformations);
 

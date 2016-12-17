@@ -1,7 +1,7 @@
 ﻿namespace Domain.Models
 {
-    using System.Collections.Generic;
     using Interfaces;
+    using System.Collections.Generic;
 
     public class NameWithNamedAttributes : INameWithNamedAttributes
     {

@@ -4,6 +4,6 @@
 
     public interface IShapeVerticesGetter
     {
-        IEnumerable<IShapeVertex> Get();
+        IEnumerable<IShapeVertex> Get(INameWithNamedAttributes instructions);
     }
 }

@@ -8,26 +8,26 @@
     public class ShapesAndTransformations : IShapesAndTransformations
     {
         INameWithNamedAttributesGetter shapesAttributesGetter;
-        IShapeVerticesGetter shapesVerticesGetter;
+        IShapeVerticesGetter shapeVerticesGetter;
         INameWithNamedAttributesGetter transformationsAttributesGetter;
         INameWithNamedAttributesConsolePrinter shapeAttributesPrinter;
-        IShapeTransformer shapeTransformer;
+        IShapeCommandsGetter shapeCommandsGetter;
 
         IEnumerable<INameWithNamedAttributes> shapesAttributes;
         IEnumerable<INameWithNamedAttributes> transformsAttributes;
 
         public ShapesAndTransformations(INameWithNamedAttributesGetter shapesAttributesGetter
-            , IShapeVerticesGetter shapesVerticesGetter
+            , IShapeVerticesGetter shapeVerticesGetter
             , INameWithNamedAttributesGetter transformationsAttributesGetter
             , INameWithNamedAttributesConsolePrinter shapeAttributesPrinter
-            , IShapeTransformer shapeTransformer)
+            , IShapeCommandsGetter shapeCommandsGetter)
         {
             // TODO: These cannot be null
             this.shapesAttributesGetter = shapesAttributesGetter;
-            this.shapesVerticesGetter = shapesVerticesGetter;
+            this.shapeVerticesGetter = shapeVerticesGetter;
             this.transformationsAttributesGetter = transformationsAttributesGetter;
             this.shapeAttributesPrinter = shapeAttributesPrinter;
-            this.shapeTransformer = shapeTransformer;
+            this.shapeCommandsGetter = shapeCommandsGetter;
 
             LoadShapes();
             LoadTransforms();
@@ -54,8 +54,17 @@
         public void TransformShapes()
         {
             Console.WriteLine("Transforming shapes");
-            var shapeVertices = shapesVerticesGetter.Get();
-            shapeTransformer.Transform();
+
+            var commands = shapeCommandsGetter.Get(transformsAttributes);
+
+            foreach(var shapeAttributes in shapesAttributes)
+            {
+                foreach(var command in commands)
+                {
+                    var vertices = shapeVerticesGetter.Get(shapeAttributes);
+                    command.Execute(vertices);
+                }
+            }
         }
     }
 }

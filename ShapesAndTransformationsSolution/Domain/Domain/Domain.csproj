@@ -40,24 +40,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\NoCommand.cs" />
     <Compile Include="Exceptions\ShapesAndTransformationsIsNullException.cs" />
     <Compile Include="Interfaces\IFileContentsGetter.cs" />
-    <Compile Include="Interfaces\IShapeCommand.cs" />
-    <Compile Include="Interfaces\IShapeCommandsGetter.cs" />
-    <Compile Include="Interfaces\IShapeTransformer.cs" />
-    <Compile Include="Interfaces\INameWithNamedAttributesPrinter.cs" />
     <Compile Include="Interfaces\INameWithNamedAttributes.cs" />
     <Compile Include="Interfaces\INameWithNamedAttributesGetter.cs" />
+    <Compile Include="Interfaces\INameWithNamedAttributesPrinter.cs" />
+    <Compile Include="Interfaces\IShapeCommand.cs" />
+    <Compile Include="Interfaces\IShapeCommandsGetter.cs" />
     <Compile Include="Interfaces\IShapeVertex.cs" />
     <Compile Include="Interfaces\IShapeVerticesGetter.cs" />
     <Compile Include="Interfaces\IXElementToNameWithNamedAttributesConvertor.cs" />
     <Compile Include="Models\FileContentsGetter.cs" />
+    <Compile Include="Commands\RotateCommand.cs" />
+    <Compile Include="Interfaces\IShapeCommandGetter.cs" />
     <Compile Include="Models\NameWithNamedAttributes.cs" />
     <Compile Include="Models\NameWithNamedAttributesPrinter.cs" />
     <Compile Include="Models\NameWithNamedAttributesGetter.cs" />
-    <Compile Include="Models\ShapeCommand.cs" />
+    <Compile Include="Commands\MoveCommand.cs" />
+    <Compile Include="Commands\ScaleCommand.cs" />
+    <Compile Include="Models\ShapeCommandGetter.cs" />
     <Compile Include="Models\ShapeCommandsGetter.cs" />
-    <Compile Include="Models\ShapeTransformer.cs" />
     <Compile Include="Models\ShapeVerticesGetter.cs" />
     <Compile Include="Models\XElementToNameWithNamedAttributesConvertor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

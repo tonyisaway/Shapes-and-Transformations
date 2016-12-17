@@ -1,7 +1,9 @@
 ﻿namespace Domain.Interfaces
 {
+    using System.Collections.Generic;
+
     public interface IShapeCommandsGetter
     {
-        void Get();
+        IEnumerable<IShapeCommand> Get(IEnumerable<INameWithNamedAttributes> instructions);
     }
 }

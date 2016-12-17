@@ -5,7 +5,7 @@
 
     public class ShapeVerticesGetter : IShapeVerticesGetter
     {
-        public IEnumerable<IShapeVertex> Get()
+        public IEnumerable<IShapeVertex> Get(INameWithNamedAttributes instructions)
         {
             var shapeVertices = new List<IShapeVertex>();
 
